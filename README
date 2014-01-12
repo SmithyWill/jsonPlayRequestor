@@ -2,3 +2,13 @@ This is your new Play application
 =====================================
 
 This file will be packaged with your application, when using `play dist`.
+
+1) Ensure you have also download the jsonPlayService application. 
+
+2) Navigate to the play dir in terminal. Type play. 
+
+3) Type run. 
+
+4) navigate to localhost:9000/jsonForm.
+
+5) should see a form to complete.
