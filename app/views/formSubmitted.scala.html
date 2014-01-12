@@ -1,0 +1,46 @@
+@(user: UserReturn)
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title>Form Example</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/formSubmitted.css")">
+    </head>
+
+<body>
+
+<div class="gov_logo_div">
+
+	<div id=gov_logo>
+		<img src="@routes.Assets.at("images/hmrc_crest.png")" alt="hmrc_logo"/>
+		
+		<div id=gov_text>
+			<p>GOV.UK</p>
+		</div>
+	</div>		
+</div>
+
+<div class="content">
+	<div class="page-header"> 
+	<h1>Here are your details</h1>
+	</div> 
+	<div class="data">
+		<h3>Name: @user.name</h3>
+		<h3>User ID: @user.id</h3>
+		<h3>Age: @user.age</h3>
+		<h3>Gender: @user.gender</h3>
+		<h3>Address: @user.address</h3>
+	</div>
+	
+	@helper.form(action = routes.Application.jsonForm) {
+	<div class="backButton">
+		<input type="submit" class="btn primary" value="Back">
+ 	</div>
+	}
+</div>
+
+</body>
+</html>
+
