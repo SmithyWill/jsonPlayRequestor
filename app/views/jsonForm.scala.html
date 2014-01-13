@@ -23,22 +23,21 @@
 </div>
 
 <fieldset>
-        <legend>Customer Information</legend>
-   @helper.form(action = routes.Application.sendRequest) {
+   <legend>Customer Information</legend>
+   		@helper.form(action = routes.Application.sendRequest) {
     
-   @helper.inputText(userForm("name"), '_label -> "Customer Name ")
+   		@helper.inputText(userForm("name"), '_label -> "Customer Name ")
     
-   @helper.inputText(userForm("id"),'_label -> "Customer ID ")
-
+   		@helper.inputText(userForm("id"),'_label -> "Customer ID ")
     
-    
-    <div class="actions">
-    <input type="submit" class="btn primary" value="Submit">
-    </div>
+    	<div class="actions">
+    	<input type="submit" class="btn primary" value="Submit">
+    	</div>
     
 }
-    </fieldset>
-</legend>
+	</legend>
+</fieldset>
+
 
 </body>
 </html>

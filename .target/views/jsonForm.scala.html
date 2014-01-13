@@ -1,7 +1,6 @@
 @(userForm: Form[User])
 
 
-
 <!DOCTYPE html>
 
 <html>
@@ -9,27 +8,36 @@
     <title>Form Example</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
     </head>
+
 <body>
 
 <div class="gov_logo_div">
-	<img src="@routes.Assets.at("images/hmrc_crest.png")" alt="hmrc_logo" id=gov_logo>
-		GOV.UK
+
+	<div id=gov_logo>
+		<img src="@routes.Assets.at("images/hmrc_crest.png")" alt="hmrc_logo"/>
+		
+		<div id=gov_text>
+			<p>GOV.UK</p>
+		</div>
+	</div>		
 </div>
 
-<h1>Please enter your details here</h1>
-
-@helper.form(action = routes.Application.sendRequest) {
+<fieldset>
+   <legend>Customer Information</legend>
+   		@helper.form(action = routes.Application.sendRequest) {
     
-   @helper.inputText(userForm("name"))
+   		@helper.inputText(userForm("name"), '_label -> "Customer Name ")
     
-   @helper.inputText(userForm("id"))
+   		@helper.inputText(userForm("id"),'_label -> "Customer ID ")
     
-    
-    <div class="actions">
-    <input type="submit" class="btn primary" value="Submit">
-    </div>
+    	<div class="actions">
+    	<input type="submit" class="btn primary" value="Submit">
+    	</div>
     
 }
+	</legend>
+</fieldset>
+
 
 </body>
 </html>
